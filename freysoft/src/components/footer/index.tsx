@@ -22,49 +22,44 @@ const styles = {
     alignItems: 'center'
   }
 }
-export default function LabelBottomNavigation() {
-  const [value, setValue] = React.useState('home');
-
-  const handleChange = (event: React.MouseEventHandler<HTMLAnchorElement>, newValue: React.SetStateAction<string>) => {
-    setValue(newValue);
-  };
-  console.log(value);
-
+export default function LabelBottomNavigation(
+  { tabValue, setTabValue }: { tabValue: string, setTabValue: (newTab: string) => void }
+) {
   return (
-    <BottomNavigation sx={{ width: 500, display: 'flex', justifyContent: 'center', alignItems: 'center' }} value={value}>
-      <Link to="/home" onClick={() => setValue('home')}>
+    <BottomNavigation sx={{ width: 500, display: 'flex', justifyContent: 'center', alignItems: 'center' }} value={tabValue}>
+      <Link to="/home" onClick={() => setTabValue('home')}>
         <BottomNavigationAction
           label="Home"
           value="home"
-          icon={<HomeRoundedIcon sx={{ color: value === 'home' ? '#FF643B' : '#A3A3A3' }} />}
+          icon={<HomeRoundedIcon sx={{ color: tabValue === 'home' ? '#FF643B' : '#A3A3A3' }} />}
         />
       </Link>
-      <Link to="/expenses" onClick={() => setValue('expenses')}>
+      <Link to="/expenses" onClick={() => setTabValue('expenses')}>
         <BottomNavigationAction
           label="Favorites"
           value="favorites"
-          icon={<CreditCardRoundedIcon sx={{ color: value === 'expenses' ? '#FF643B' : '#A3A3A3' }} />}
+          icon={<CreditCardRoundedIcon sx={{ color: tabValue === 'expenses' ? '#FF643B' : '#A3A3A3' }} />}
         />
       </Link>
-      <Link to="/add" onClick={() => setValue('add')}>
+      <Link to="/add" onClick={() => setTabValue('add')}>
         <BottomNavigationAction
           label="add"
           value="Add"
           icon={<Box sx={styles.round}><AddOutlinedIcon sx={{ color: '#fff' }} /></Box>}
         />
       </Link>
-      <Link to="/calendar" onClick={() => setValue('calendar')}>
+      <Link to="/calendar" onClick={() => setTabValue('calendar')}>
         <BottomNavigationAction
           label="Calendar"
           value="calendar"
-          icon={<CalendarTodayOutlinedIcon sx={{ color: value === 'calendar' ? '#FF643B' : '#A3A3A3' }} />}
+          icon={<CalendarTodayOutlinedIcon sx={{ color: tabValue === 'calendar' ? '#FF643B' : '#A3A3A3' }} />}
         />
       </Link>
-      <Link to="/setting" onClick={() => setValue('setting')}>
+      <Link to="/setting" onClick={() => setTabValue('setting')}>
         <BottomNavigationAction
           label="Setting"
           value="setting"
-          icon={<SettingsOutlinedIcon sx={{ color: value === 'setting' ? '#FF643B' : '#A3A3A3' }} />} />
+          icon={<SettingsOutlinedIcon sx={{ color: tabValue === 'setting' ? '#FF643B' : '#A3A3A3' }} />} />
       </Link>
     </BottomNavigation>
   )
