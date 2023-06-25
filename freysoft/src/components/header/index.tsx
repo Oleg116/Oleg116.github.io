@@ -1,4 +1,4 @@
-import React, { CSSProperties, FunctionComponent, SVGAttributes } from 'react'
+import React, { CSSProperties } from 'react'
 import Box from '@mui/system/Box'
 import { Typography } from '@mui/material'
 import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
@@ -16,12 +16,12 @@ const fontStyles: CSSProperties = {
 
 export default function Header({ header }: { header: string }) {
   return (
-    <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-      <Box sx={{ width: '80px' }}>
+    <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
+      <Box >
         <img src={(avatar as unknown) as string} />
       </Box>
       <Typography style={fontStyles}>{header}</Typography>
-      <NotificationsOutlinedIcon sx={{ width: '80px' }} />
+      <NotificationsOutlinedIcon />
     </Box >
   )
 }

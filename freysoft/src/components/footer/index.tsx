@@ -26,10 +26,10 @@ export default function LabelBottomNavigation(
   { tabValue, setTabValue }: { tabValue: string, setTabValue: (newTab: string) => void }
 ) {
   return (
-    <BottomNavigation sx={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }} value={tabValue}>
+    <BottomNavigation sx={{ position: 'fixed', bottom: '0', width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }} value={tabValue}>
       <Link to="/home" onClick={() => setTabValue('home')}>
         <BottomNavigationAction
-          sx={{ p: 0 }}
+          sx={{ p: 2, minWidth: 0 }}
           label="Home"
           value="home"
           icon={<HomeRoundedIcon sx={{ color: tabValue === 'home' ? '#FF643B' : '#A3A3A3' }} />}
@@ -37,7 +37,7 @@ export default function LabelBottomNavigation(
       </Link>
       <Link to="/expenses" onClick={() => setTabValue('expenses')}>
         <BottomNavigationAction
-          sx={{ p: 0 }}
+          sx={{ p: 0, minWidth: 0 }}
           label="Favorites"
           value="favorites"
           icon={<CreditCardRoundedIcon sx={{ color: tabValue === 'expenses' ? '#FF643B' : '#A3A3A3' }} />}
@@ -45,7 +45,7 @@ export default function LabelBottomNavigation(
       </Link>
       <Link to="/add" onClick={() => setTabValue('add')}>
         <BottomNavigationAction
-          sx={{ p: 0 }}
+          sx={{ p: 0, minWidth: 0 }}
           label="add"
           value="Add"
           icon={<Box sx={styles.round}><AddOutlinedIcon sx={{ color: '#fff' }} /></Box>}
@@ -53,7 +53,7 @@ export default function LabelBottomNavigation(
       </Link>
       <Link to="/calendar" onClick={() => setTabValue('calendar')}>
         <BottomNavigationAction
-          sx={{ p: 0 }}
+          sx={{ p: 0, minWidth: 0 }}
           label="Calendar"
           value="calendar"
           icon={<CalendarTodayOutlinedIcon sx={{ color: tabValue === 'calendar' ? '#FF643B' : '#A3A3A3' }} />}
@@ -61,7 +61,7 @@ export default function LabelBottomNavigation(
       </Link>
       <Link to="/setting" onClick={() => setTabValue('setting')}>
         <BottomNavigationAction
-          sx={{ p: 0 }}
+          sx={{ p: 2, minWidth: 0 }}
           label="Setting"
           value="setting"
           icon={<SettingsOutlinedIcon sx={{ color: tabValue === 'setting' ? '#FF643B' : '#A3A3A3' }} />} />
