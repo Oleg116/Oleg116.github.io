@@ -7,13 +7,13 @@ import Wrapper from './components/wrapper'
 import Card from './components/card/components/Card'
 
 export default function Root() {
-    const [tab, setTab] = useState('home')
+    const [tab, setTab] = useState('')
     return (
         <Box sx={{ width: '100vw', height: '100vh', overflow: 'auto' }}>
             <Wrapper header={tab}>
                 <BrowserRouter>
                     <Routes>
-                        <Route index path='/home' element={<Card />} />
+                        <Route index path='' element={<Card />} />
                         <Route path="Expenses" element={<Box>3</Box>} />
                         <Route path="*" element={<Box>404</Box>} />
                     </Routes>

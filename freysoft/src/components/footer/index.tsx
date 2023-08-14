@@ -27,12 +27,12 @@ export default function LabelBottomNavigation(
 ) {
   return (
     <BottomNavigation sx={{ position: 'fixed', bottom: '0', width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }} value={tabValue}>
-      <Link to="/home" onClick={() => setTabValue('home')}>
+      <Link to="" onClick={() => setTabValue('')}>
         <BottomNavigationAction
           sx={{ p: 2, minWidth: 0 }}
           label="Home"
           value="home"
-          icon={<HomeRoundedIcon sx={{ color: tabValue === 'home' ? '#FF643B' : '#A3A3A3' }} />}
+          icon={<HomeRoundedIcon sx={{ color: tabValue === '' ? '#FF643B' : '#A3A3A3' }} />}
         />
       </Link>
       <Link to="/expenses" onClick={() => setTabValue('expenses')}>
