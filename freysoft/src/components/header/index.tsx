@@ -22,13 +22,12 @@ export default function Header({ header }: { header: string }) {
       justifyContent: 'space-between',
       alignItems: 'center',
       width: '100%',
-      borderBottom: '1px solid #A3A3A3',
       position: 'fixed',
       top: '0px',
       background: '#fff',
       zIndex: 2
     }}>
-      <Box >
+      <Box sx={{ p: 0.5 }}>
         <img src={(avatar as unknown) as string} />
       </Box>
       <Typography style={fontStyles}>{header}</Typography>

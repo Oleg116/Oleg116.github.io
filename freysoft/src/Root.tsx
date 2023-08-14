@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Box from '@mui/material/Box'
 import LabelBottomNavigation from './components/footer'
 import Wrapper from './components/wrapper'
-import Card from './components/card/components/Card'
+import Card from './components/card'
 
 export default function Root() {
     const [tab, setTab] = useState('')
