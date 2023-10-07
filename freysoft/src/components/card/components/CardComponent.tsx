@@ -20,7 +20,7 @@ export default function Card() {
   const [isCVCSide, setCVCSide] = useState(false);
 
   return (
-    <Box sx={{ position: 'fixed', width: 'calc(100% - 16px)', top: '60px', left: '0', p: 1 }}>
+    <Box sx={{ paddingTop: '60px' }}>
       <Box
         sx={{ ...boxStyles, transform: `rotateY(${isCVCSide ? 180 : 0}deg)` }} onClick={() => setCVCSide(!isCVCSide)}
       >
