@@ -3,7 +3,6 @@ import Box from '@mui/system/Box'
 import { Typography } from '@mui/material'
 import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
 import avatar from '../assets/avatar.svg'
-import zIndex from '@mui/material/styles/zIndex';
 
 const fontStyles: CSSProperties = {
   fontSize: '24px',
@@ -25,7 +24,7 @@ export default function Header({ header }: { header: string }) {
       position: 'fixed',
       top: '0px',
       background: '#fff',
-      zIndex: 2
+      zIndex: 2,
     }}>
       <Box sx={{ p: 0.5 }}>
         <img src={(avatar as unknown) as string} />
