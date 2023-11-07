@@ -1,16 +1,13 @@
 import React, { useState } from 'react'
 
-import { SxProps, Typography } from '@mui/material'
+import { Typography } from '@mui/material'
 import Box from '@mui/material/Box'
-import { Theme, css, keyframes } from "@emotion/react"
-import { useTheme } from "@mui/material/styles";
 import Balance from './Balance'
 import CardNumber from './CardNumber'
 import masterCard from '../../assets/mastercardLogo.svg'
 
 const boxStyles = {
   padding: '20px 30px 23px 30px',
-  width: '90%',
   height: '190px',
   backgroundColor: '#2F3046',
   borderRadius: '24px',
@@ -20,10 +17,10 @@ const boxStyles = {
 
 export default function Card() {
 
-  const [isCVCSide, setCVCSide] = React.useState(false);
+  const [isCVCSide, setCVCSide] = useState(false);
 
   return (
-    <Box sx={{ position: 'absolute', width: '100%' }}>
+    <Box sx={{ paddingTop: '60px' }}>
       <Box
         sx={{ ...boxStyles, transform: `rotateY(${isCVCSide ? 180 : 0}deg)` }} onClick={() => setCVCSide(!isCVCSide)}
       >

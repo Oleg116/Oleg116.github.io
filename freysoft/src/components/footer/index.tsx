@@ -26,7 +26,7 @@ export default function LabelBottomNavigation(
   { tabValue, setTabValue }: { tabValue: string, setTabValue: (newTab: string) => void }
 ) {
   return (
-    <BottomNavigation sx={{ position: 'fixed', bottom: '0', width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }} value={tabValue}>
+    <BottomNavigation sx={{ position: 'fixed', bottom: '0', height: 56, width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }} value={tabValue}>
       <Link to="" onClick={() => setTabValue('')}>
         <BottomNavigationAction
           sx={{ p: 2, minWidth: 0 }}

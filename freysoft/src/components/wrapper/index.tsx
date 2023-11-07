@@ -6,9 +6,7 @@ export default function Wrapper({ children, header }: { children: ReactElement, 
     return (
         <Box sx={{ p: 2, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
             <Header header={header} />
-            <Box sx={{ height: '1000px', width: '100%', position: 'relative' }}>
-                {children}
-            </Box>
+            {children}
         </Box >
     )
 } 
