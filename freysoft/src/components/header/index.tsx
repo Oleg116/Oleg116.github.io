@@ -1,5 +1,5 @@
 import React, { CSSProperties } from 'react'
-import Box from '@mui/system/Box'
+import Box from '@mui/material/Box'
 import { Typography } from '@mui/material'
 import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
 import avatar from '../assets/avatar.svg'
@@ -25,12 +25,15 @@ export default function Header({ header }: { header: string }) {
       top: '0px',
       background: '#fff',
       zIndex: 2,
+      borderBottom: '1px solid #c9c7c7',
+      boxShadow: ' 0px -2px 10px -2px #000000bf'
+
     }}>
       <Box sx={{ p: 0.5 }}>
         <img src={(avatar as unknown) as string} />
       </Box>
       <Typography style={fontStyles}>{header}</Typography>
-      <NotificationsOutlinedIcon />
+      <NotificationsOutlinedIcon sx={{ marginRight: '15px' }} />
     </Box >
   )
 }
