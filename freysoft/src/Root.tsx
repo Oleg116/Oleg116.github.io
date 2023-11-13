@@ -10,8 +10,6 @@ import Header from './components/header'
 export default function Root() {
     const location = window.location.pathname.substring(1)
 
-    console.log(location);
-
     const [tab, setTab] = useState(location || 'Home')
     return (
         <Box sx={{ width: '100vw', height: '100vh', overflow: 'auto' }}>

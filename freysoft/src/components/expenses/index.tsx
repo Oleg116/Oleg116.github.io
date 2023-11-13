@@ -30,7 +30,7 @@ export default function Expenses() {
   }
 
   const currentExpense = (date: keyof typeof mock): React.ReactElement | null => {
-    const dailySpendings = mock.hasOwnProperty(date) ? mock[date] : undefined;
+    const dailySpendings = mock.hasOwnProperty(date) ? mock[date] : null;
 
     if (!dailySpendings) {
       return null;
