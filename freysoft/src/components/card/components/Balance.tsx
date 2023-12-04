@@ -21,7 +21,7 @@ export default function Balance({ isActive }: { isActive: boolean }) {
         transition: '0.7s',
         transitionDelay: isActive ? '0.7s' : '0s',
         transitionProperty: 'color',
-        fontFamily: 'Roboto',
+        fontFamily: 'DM Sans',
         fontWeight: 700,
         textAlign: 'left',
       }}>$76,22.00</Typography>

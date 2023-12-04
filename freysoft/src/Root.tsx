@@ -12,16 +12,18 @@ export default function Root() {
 
     const [tab, setTab] = useState(location || 'Home')
     return (
-        <Box sx={{ width: '100vw', height: '100vh', overflow: 'auto' }}>
+        <Box sx={{ fontFamily: 'DM Sans', width: '100vw', height: '100vh', overflow: 'auto' }}>
             <Header header={tab || 'Home'} />
-            <BrowserRouter>
-                <Routes>
-                    <Route index path='' element={<Card />} />
-                    <Route path="Expenses" element={<Expenses />} />
-                    <Route path="*" element={<Box>404</Box>} />
-                </Routes>
-                <LabelBottomNavigation tabValue={tab} setTabValue={setTab} />
-            </BrowserRouter>
+            <Box sx={{ padding: '0 15px' }}>
+                <BrowserRouter>
+                    <Routes>
+                        <Route index path='' element={<Card />} />
+                        <Route path="Expenses" element={<Expenses />} />
+                        <Route path="*" element={<Box>404</Box>} />
+                    </Routes>
+                    <LabelBottomNavigation tabValue={tab} setTabValue={setTab} />
+                </BrowserRouter>
+            </Box>
         </Box >
     )
 }

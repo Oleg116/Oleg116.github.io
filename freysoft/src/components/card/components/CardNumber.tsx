@@ -12,7 +12,7 @@ export default function CardNumber({ isActive }: { isActive: boolean }) {
         transitionProperty: 'color',
         color: isActive ? '#A3A3A3' : '#2F3046',
         fontSize: '18px',
-        fontFamily: 'Roboto',
+        fontFamily: 'DM Sans',
         fontWeight: 500
       }}>{elem}</Typography>)
       }

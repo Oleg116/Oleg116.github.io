@@ -12,7 +12,7 @@ export default function Card() {
     },
     title: {
       text: 'Analytics',
-      style: { fontFamily: 'Roboto' },
+      style: { fontFamily: 'DM Sans' },
       align: 'left'
     },
     xAxis: {
@@ -20,7 +20,6 @@ export default function Card() {
       key: '',
       labels: {
         style: {
-          fontFamily: 'Roboto',
           fontSize: '13px',
           fontStyle: 'normal',
           fontWeight: 400,
@@ -31,7 +30,6 @@ export default function Card() {
     yAxis: {
       labels: {
         style: {
-          fontFamily: 'Roboto',
           fontSize: '13px',
           fontStyle: 'normal',
           fontWeight: 400,
